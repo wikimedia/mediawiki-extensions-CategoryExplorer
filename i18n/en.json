@@ -1,3 +1,4 @@
 {
-  "categoryexplorer-desc": "A new extension."
+	"@metadata": {},
+	"categoryexplorer-desc": "Replicates the $wgUseCategoryBrowser configuration parameter that was removed in 1.38."
 }
