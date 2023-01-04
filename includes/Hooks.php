@@ -2,6 +2,7 @@
 namespace CategoryExplorer;
 
 use MediaWiki\MediaWikiServices;
+use Skin;
 use Title;
 
 class Hooks {
@@ -10,7 +11,7 @@ class Hooks {
 	 * @param array $tree Categories tree returned by Title::getParentCategoryTree
 	 * @return string Separated by &gt;, terminate with "\n"
 	 */
-	private static function drawCategoryBrowser( $tree ) {
+	private static function drawCategoryBrowser( array $tree ): string {
 		$return = '';
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		foreach ( $tree as $element => $parent ) {
@@ -32,9 +33,9 @@ class Hooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinAfterPortlet
 	 * @param Skin $skin
 	 * @param string $portlet
-	 * @param string $html
+	 * @param string &$html
 	 */
-	public static function onSkinAfterPortlet( $skin, $portlet, &$html ) {
+	public static function onSkinAfterPortlet( Skin $skin, string $portlet, string &$html ) {
 		// Code goes here.
 		if ( $portlet === 'category-normal' ) {
 			$title = $skin->getOutput()->getTitle();
