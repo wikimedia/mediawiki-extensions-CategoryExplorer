@@ -15,7 +15,7 @@ class Hooks {
 		$return = '';
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		foreach ( $tree as $element => $parent ) {
-			if ( empty( $parent ) ) {
+			if ( !$parent ) {
 				# element start a new list
 				$return .= "\n";
 			} else {
