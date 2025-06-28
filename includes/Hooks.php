@@ -2,8 +2,8 @@
 namespace CategoryExplorer;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Skin;
-use Title;
 
 class Hooks {
 	/**
