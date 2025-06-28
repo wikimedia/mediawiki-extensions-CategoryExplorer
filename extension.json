@@ -33,7 +33,10 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "CategoryExplorer\\Hooks"
+			"class": "CategoryExplorer\\Hooks",
+			"services": [
+				"LinkRenderer"
+			]
 		}
 	},
 	"Hooks": {
