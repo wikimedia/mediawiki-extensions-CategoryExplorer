@@ -31,8 +31,13 @@
 		"localBasePath": "",
 		"remoteExtPath": "CategoryExplorer"
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "CategoryExplorer\\Hooks"
+		}
+	},
 	"Hooks": {
-		"SkinAfterPortlet": "CategoryExplorer\\Hooks::onSkinAfterPortlet"
+		"SkinAfterPortlet": "main"
 	},
 	"config": {},
 	"DefaultUserOptions": {},

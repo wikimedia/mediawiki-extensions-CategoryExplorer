@@ -5,7 +5,9 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use Skin;
 
-class Hooks {
+class Hooks implements
+	\MediaWiki\Skins\Hook\SkinAfterPortletHook
+{
 	/**
 	 * Render the array as a series of links.
 	 * @param array $tree Categories tree returned by Title::getParentCategoryTree
@@ -35,7 +37,7 @@ class Hooks {
 	 * @param string $portlet
 	 * @param string &$html
 	 */
-	public static function onSkinAfterPortlet( Skin $skin, string $portlet, string &$html ) {
+	public function onSkinAfterPortlet( $skin, $portlet, &$html ) {
 		// Code goes here.
 		if ( $portlet === 'category-normal' ) {
 			$title = $skin->getOutput()->getTitle();
