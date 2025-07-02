@@ -24,7 +24,7 @@
 		"CategoryExplorer\\": "includes/"
 	},
 	"TestAutoloadNamespaces": {
-		"CategoryExplorer\\Tests\\": "tests/phpunit"
+		"CategoryExplorer\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {},
 	"ResourceFileModulePaths": {
