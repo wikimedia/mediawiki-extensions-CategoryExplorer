@@ -2,8 +2,8 @@
 namespace CategoryExplorer;
 
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
-use Skin;
 
 class Hooks implements
 	\MediaWiki\Skins\Hook\SkinAfterPortletHook
